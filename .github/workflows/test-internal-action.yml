@@ -1,4 +1,4 @@
-name: Testing internal action
+name: Testing internal action in another org
 
 on: workflow_dispatch
 
@@ -10,10 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: github/internal-action-1@v5
-        with:
-          milliseconds: 1000
-      
-      - uses: github/internal-2@v3
+      - uses: Internal-Actions/josh-internal-action@v1
         with:
           milliseconds: 1000
